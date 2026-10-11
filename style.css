@@ -1,0 +1,140 @@
+:root {
+    --background-color: lightblue;
+    --section-color: white;
+    --heading-color: rgb(17, 66, 21);
+    --nav-color: rgb(17, 66, 21);
+    --text-color: black;
+    --border-color: lightskyblue;
+    --main-font: Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--main-font);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.6;
+}
+
+header, footer {
+    background-color: var(--heading-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 5px 0;
+}
+
+nav {
+    background-color: var(--nav-color);
+    text-align: center;
+    padding: 12px;
+}
+
+nav a {
+    color: white;
+    display: inline-block;
+    padding: 8px 15px;
+}
+
+nav a:hover, nav a:focus {
+    background-color: white;
+    color: var(--nav-color);
+}
+
+nav a[aria-current="page"] {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: var(--section-color);
+    padding: 25px;
+    margin-bottom: 20px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+}
+
+h2, h3 {
+    color: var(--heading-color);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.profile div {
+    flex: 1;
+}
+
+img {
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--heading-color);
+    overflow-wrap: anywhere;
+}
+
+li + li {
+    margin-top: 8px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid var(--heading-color);
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--border-color);
+}
+
+#back-to-top {
+    text-align: right;
+}
+
+@media (max-width: 600px) {
+    main {
+        margin: 15px auto;
+        padding: 0 12px;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    .profile {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav a {
+        padding: 8px;
+    }
+}
